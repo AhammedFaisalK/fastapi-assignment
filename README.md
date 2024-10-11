@@ -22,5 +22,5 @@ This project is a FastAPI application implementing CRUD operations for **Items**
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/username/fastapi-assignment.git
+git clone https://github.com/AhammedFaisalK/fastapi-assignment.git
 cd fastapi-assignment
