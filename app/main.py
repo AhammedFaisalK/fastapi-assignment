@@ -1,5 +1,13 @@
+import os
 from fastapi import FastAPI
 from app.routes import item_routes, clock_in_routes
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Get the secret key from environment variables
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 app = FastAPI()
 
