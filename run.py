@@ -1,8 +1,8 @@
-# import uvicorn
+import uvicorn
+import os
 
-# if __name__ == "__main__":
-#     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000)
-
+    # Use the PORT environment variable if available, otherwise default to 8000
+    port = int(os.getenv("PORT", 8000))
+    
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
