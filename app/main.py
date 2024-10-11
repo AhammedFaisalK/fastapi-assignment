@@ -15,6 +15,10 @@ app = FastAPI()
 app.include_router(item_routes.router, prefix="/items", tags=["Items"])
 app.include_router(clock_in_routes.router, prefix="/clock-in", tags=["Clock-In Records"])
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to my FastAPI application"}
+
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
